@@ -12,3 +12,106 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+#container{
+    width: 99%;
+    height: 99%;
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.title{
+    height: 10%;
+}
+
+.title, .accountingLine, h1, h2, #result, .contain{
+    width: 100%;
+}
+
+.contain{
+    height: 90%;
+    justify-content: space-between;
+}
+
+
+
+h1, h2, h3{
+    text-transform: uppercase;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+h3{
+    display: inline-block;
+}
+
+#spent, #receipts{
+    width: 50%;
+    height: 80%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.2rem;
+}
+
+#spent {
+    background-color: aliceblue;
+}
+
+#receipts{
+    background-color: aquamarine;
+}
+
+#spent, #receipts, .subLine ,.contain{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.accountingLine {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#result {
+    height: 10%;
+}
+
+#modal {
+    width: 35%;
+    height: 35%;
+    position: fixed;
+    left: 32.5%;
+    top: 32.5%;
+    background-color: azure;
+    padding: 0.5%;
+}
+
+#info{
+    padding: 0.5%;
+}
+
+#divButton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#divButton button{
+    margin: 2%;
+}
