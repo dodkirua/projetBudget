@@ -10,21 +10,40 @@ html {
 
 body {
     width: 100vw;
-    height: 100vh;
+
 }
 
 #container{
     width: 99%;
-    height: 99%;
+
     margin: 1%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.title{
-    height: 10%;
+#interact{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.subTitle{
+
+    display: flex;
+    justify-content: stretch;
+}
+
+.total {
+    width: 100%;
+
+}
+
+input{
+    text-align: right;
 }
 
 .title, .accountingLine, h1, h2, #result, .contain{
@@ -32,11 +51,12 @@ body {
 }
 
 .contain{
-    height: 90%;
     justify-content: space-between;
 }
 
-
+.subLine{
+    width: 99%;
+}
 
 h1, h2, h3{
     text-transform: uppercase;
@@ -59,10 +79,9 @@ h3{
 
 #spent, #receipts{
     width: 50%;
-    height: 80%;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0.2rem;
+    padding: 0.5rem;
 }
 
 #spent {
@@ -76,8 +95,23 @@ h3{
 #spent, #receipts, .subLine ,.contain{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+}
 
+.add{
+    width: 1.5vh;
+    height: 1.5vh;
+    background-color: white;
+    margin-left: 2rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add:hover{
+    cursor: pointer;
+    background-color: green;
 }
 
 .accountingLine {
@@ -89,21 +123,50 @@ h3{
 }
 
 #result {
-    height: 10%;
+    background-color: dimgrey;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#calc{
+    border: black 1px solid;
+    width: 10vh;
+    height: 4vh;
+    text-transform: uppercase;
+    background-color: darkgray;
+}
+
+#text {
+    width: 80%;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+#value{
+    width: 20%;
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
 #modal {
     width: 35%;
-    height: 35%;
     position: fixed;
     left: 32.5%;
     top: 32.5%;
     background-color: azure;
     padding: 0.5%;
+    box-shadow: 1px 1px 2px darkgray, -1px -1px 2px darkgray;
 }
 
-#info{
+#info, #calc{
     padding: 0.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #divButton {
@@ -114,4 +177,34 @@ h3{
 
 #divButton button{
     margin: 2%;
+}
+
+@media screen and (max-width: 950px){
+    input{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 800px){
+    #value,  #text{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 650px){
+    #value,  #text{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 600px){
+    #interact{
+        flex-direction: column;
+    }
+    #spent, #receipts{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #value,  #text{
+        font-size: 0.8rem;
+    }
 }
